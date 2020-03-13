@@ -3,10 +3,12 @@ import { render } from 'react-dom';
 import './styles/styles.scss';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/toastr/build/toastr.min.css';
-import configureStore from './stores/configureStrore';
+import configureStore from './stores/configureStore';
 import { Provider } from 'react-redux'; 
 import routes from './routes';
 import { Router, browserHistory } from 'react-router';
+import { loadData } from './actions/dataAction';
+
 
 
 const store = configureStore();
