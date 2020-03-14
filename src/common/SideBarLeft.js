@@ -20,8 +20,12 @@ const SidebarLeft = () => {
 
                 </div>
                 <div className="sidebar ">
+
+                    <div className="sidebar-text" > 
+                    <h4 className="sidebar-text-box"> //Twitverse </h4>
+                    </div>
                             
-                    <IndexLink to="/"  activeClassName="active" className="sidebar-text" > 
+                    <IndexLink to="/myProfile"  activeClassName="active" className="sidebar-text" > 
                     <div className="sidebar-text-box">My Profile</div>
                     </IndexLink>
                     
@@ -29,7 +33,7 @@ const SidebarLeft = () => {
                     <div className="sidebar-text-box">Friends</div>
                     </Link>
 
-                    <Link to="/" activeClassName="active" className="sidebar-text" > 
+                    <Link to="/album" activeClassName="active" className="sidebar-text" > 
                     <div className="sidebar-text-box">Albums</div>
                     </Link>
      
