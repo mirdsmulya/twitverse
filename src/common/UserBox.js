@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 
 const UserBox = ({userData, deleteButton}) => {
-    let linkProfile = "/profile/"+ userData.id;
+    let linkProfile = "/profile/"+ userData.username;
     return(
         <Link to={linkProfile} activeClassName="active" className="pointer" >
         <div className="menu-box"> 
