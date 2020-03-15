@@ -5,6 +5,7 @@ import UserBox from '../common/UserBox';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as dataAction from '../actions/dataAction';
+import Toastr from 'toastr';
 
 class ListUserPage extends React.Component {
     constructor(props, context){
@@ -20,7 +21,16 @@ class ListUserPage extends React.Component {
         this.setState({userData: this.props.datas})
     }
 
+    userCheck() {
+        debugger;
+        if (sessionStorage.getItem("currentUserLogin") == null ) {
+            this.props.history.push('/login');
+            Toastr.info("Login Required")  
+        }
+    }
+
     render() {
+        this.userCheck();
         let users = this.props.datas;
         debugger;
         return(
