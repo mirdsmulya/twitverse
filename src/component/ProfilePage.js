@@ -74,7 +74,7 @@ class ProfilePage extends React.Component {
             <div className="line-menu">
                 <UserBox userData={profileData} />
                 <div></div>
-                <AddPostBox onChange={this.onType} value={this.state.postValue} display={this.state.postBox} saveButton={this.postTwit}/>
+                <AddPostBox userData={profileData} onChange={this.onType} value={this.state.postValue} display={this.state.postBox} saveButton={this.postTwit}/>
                 
                 {posts.map(post => 
                     <PostBox  key={post.id} post={post} userData={profileData} deleteButton={this.deletePost}/> 
