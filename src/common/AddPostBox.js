@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 import TexInput from '../common/TextInput';
 
 
-const AddPostBox = ({uploadTextButton, post,onChange, display,  saveButton, value}) => {
+const AddPostBox = ({onChange, display,  saveButton, value,userData}) => {
    
     debugger;
     return(
         <div className={display} >
-            <div className="post-img border">
+            <img className="post-img border" src={userData.profilePicture} alt={userData.name} />
             
                 
-            </div>
+           
 
             <div className="detail-menu  ">
        
