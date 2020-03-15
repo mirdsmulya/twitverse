@@ -1,0 +1,385 @@
+{
+
+    "data":[
+        {
+          "id": "1312",
+          "name": "Mirdan Syahid",
+          "username": "mirdsm",
+          "profilePicture": "https://www.blibli.com/friends/assets/2019/03/shutterstock_765780592.jpg",
+          "location": "Cimahi, West Java",
+          "biodate": "5 June 1994",
+          "post": [
+            {
+              "date": "12/3/2030",
+              "id": "ascassdvdi",
+              "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+              "comments": [
+                {
+                  "id": "asdgdfd",
+                  "time": "",
+                  "name": "Dani",
+                  "text": "Hi juga!"
+                },
+                {
+                  "id": "asasad",
+                  "time": "",
+                  "name": "Jordi",
+                  "text": "Ngaco woy"
+                }
+              ]
+            },
+            {
+                "date": "12/3/2030",
+                "id": "ascaascxsi",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "asassad",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "ascasxsd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+              },
+              {
+                "date": "12/3/2030",
+                "id": "ascaskmmi",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "asaxasd",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "aserfrd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+              }
+          ],
+          "albums": [
+            {
+              "name": "Photos of 2019",
+              "id": "asxx",
+              "photos": [
+                {
+                  "date": "",
+                  "id": "aswqdad",
+                  "title": "Jalan kenangan",
+                  "link":""
+                },
+                {
+                  "date": "",
+                  "id": "asqwdqd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "12312",
+          "name": "Kyle Janer",
+          "username": "kiyle",
+          "profilePicture": "https://lh3.googleusercontent.com/proxy/ZT0cL-j2Fhw_tLgErt1W6VkFhrlccCUqs1Mz85SSFAZK1g9uBaZIidDVPiJ5iy2mLb9Tcnb3wksZPVoUeyr8q1DCbxC1eujnOn9u7ygyi2TeQ_LqCQ4a8WTPp2dH7kqM8h2_HNljm7FwC36wn-znPsfp5bP0w3pn6ZGbXoGQaPhvCIsM1KZlKzIT49PoShui8alrcvzrIJDGgNOikKa1jh9Cgh4EXA",
+          "location": "Cimahi, West Java",
+          "biodate": "5 June 1994",
+          "post": [
+            {
+              "date": "12/3/2030",
+              "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+              "id": "ascaypka",
+              "comments": [
+                {
+                  "id": "asrgwfwefd",
+                  "time": "",
+                  "name": "Dani",
+                  "text": "Hi juga!"
+                },
+                {
+                  "id": "awefwesd",
+                  "time": "",
+                  "name": "Jordi",
+                  "text": "Ngaco woy"
+                }
+              ]
+            },
+            {
+                "date": "12/3/2030",
+                "id": "ascasadi",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "aqwdqsd",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "asrvrd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+            },
+            {
+                "date": "12/3/2030",
+                "id": "ascasasai",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "aqwdqsd",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "asqwxxd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+            },
+            {
+                "date": "12/3/2030",
+                "id": "ascasjghi",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "asqwdqwxd",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "aqxqsd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+            },
+            {
+                "date": "12/3/2030",
+                "id": "ascastgdfi",
+                "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+                "comments": [
+                  {
+                    "id": "qxqasd",
+                    "time": "",
+                    "name": "Dani",
+                    "text": "Hi juga!"
+                  },
+                  {
+                    "id": "asevwd",
+                    "time": "",
+                    "name": "Jordi",
+                    "text": "Ngaco woy"
+                  }
+                ]
+            }
+          ],
+          "albums": [
+            {
+              "name": "Photos of 2019",
+              "id": "as",
+              "photos": [
+                {
+                  "date": "",
+                  "id": "asqwsd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                },
+                {
+                  "date": "",
+                  "id": "aqxqsd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "34534",
+          "name": "Joe Benhard",
+          "username": "Joehard",
+          "profilePicture": "https://i.pinimg.com/originals/2e/ce/f0/2ecef0b8bc5642a074654739e61526bb.jpg",
+          "location": "Cimahi, West Java",
+          "biodate": "5 June 1994",
+          "post": [
+            {
+              "date": "12/3/2030",
+              "id": "ascathfgsq",
+              "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+              "comments": [
+                {
+                  "id": "aqxqsd",
+                  "time": "",
+                  "name": "Dani",
+                  "text": "Hi juga!"
+                },
+                {
+                  "id": "asqwxqwd",
+                  "time": "",
+                  "name": "Jordi",
+                  "text": "Ngaco woy"
+                }
+              ]
+            }
+          ],
+          "albums": [
+            {
+              "name": "Photos of 2019",
+              "id": "asll",
+              "photos": [
+                {
+                  "date": "",
+                  "id": "aqwdwsd",
+                  "title": "Jalan kenangan",
+                  "link":"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQOjR9PUtsXl-tk5TUlp_YStWmaxMlqQTli0vDEdCfVvzQgZEJP"
+                },
+                {
+                  "date": "",
+                  "id": "axqqsd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                }
+              ]
+            },
+            {
+                "name": "Photos of 2020",
+                "id": "aslla",
+                "photos": [
+                  {
+                    "date": "",
+                    "id": "aqwdwsd",
+                    "title": "Jalan kenangan",
+                    "link":""
+                  },
+                  {
+                    "date": "",
+                    "id": "axqqsd",
+                    "title": "Jalan kenangan",
+                    "link":""
+                  }
+                ]
+              }
+          ]
+        },
+        {
+          "id": "3453",
+          "name": "Desyana Putri",
+          "username": "mcmirdan",
+          "profilePicture": "https://media.suara.com/pictures/970x544/2019/08/18/23065-niki-zefanya.jpg",
+          "location": "Cimahi, West Java",
+          "biodate": "5 June 1994",
+          "post": [
+            {
+              "date": "12/3/2030",
+              "id": "ascasdfvf",
+              "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+              "comments": [
+                {
+                  "id": "asqxwqd",
+                  "time": "",
+                  "name": "Dani",
+                  "text": "Hi juga!"
+                },
+                {
+                  "id": "aqwqwsd",
+                  "time": "",
+                  "name": "Jordi",
+                  "text": "Ngaco woy"
+                }
+              ]
+            }
+          ],
+          "albums": [
+            {
+              "name": "Photos of 2019",
+              "id": "aasll",
+              "photos": [
+                {
+                  "date": "",
+                  "id": "ascecd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                },
+                {
+                  "date": "",
+                  "id": "asqxwd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "67564",
+          "name": "Slamet Setyohadi",
+          "username": "slammerset",
+          "profilePicture": "https://s0.bukalapak.com/uploads/content_attachment/fb57343f14196080535dddb5/w-744/37798771_739523599772674_8213744535461691392_n.jpg",
+          "location": "Cimahi, West Java",
+          "biodate": "5 June 1994",
+          "post": [
+            {
+              "date": "12/3/2030",
+              "id": "asclhnfas",
+              "content": "Life will guide you to nowhere if  you dont have any directon in your mind, keep pray and praise God SWT",
+              "comments": [
+                {
+                  "id": "axqqwsd",
+                  "time": "",
+                  "name": "Dani",
+                  "text": "Hi juga!"
+                },
+                {
+                  "id": "asxqwqd",
+                  "time": "",
+                  "name": "Jordi",
+                  "text": "Ngaco woy"
+                }
+              ]
+            }
+          ],
+          "albums": [
+            {
+              "name": "Photos of 2019",
+              "id": "aslld",
+              "photos": [
+                {
+                  "date": "",
+                  "id": "aqxqsd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                },
+                {
+                  "date": "",
+                  "id": "asxqwqwd",
+                  "title": "Jalan kenangan",
+                  "link":""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    
+
+
+}
