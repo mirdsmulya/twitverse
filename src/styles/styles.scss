@@ -1,0 +1,481 @@
+
+
+
+  @mixin border {
+    border: 1px solid #cccccc; 
+  }
+  @mixin side-width {
+    min-width: 19em;
+    max-width: 19em;
+  }
+
+  @mixin order-width {
+    min-width: 23em;
+    max-width: 24em;
+    
+  }
+
+  @mixin line-menu-width {
+    min-height: 100em;
+    min-width: 22em;
+    
+  }
+
+.main {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 70em;
+}
+.sidebar {
+
+  @include side-width;
+
+  margin-top: 2px;
+  padding-bottom: 20px; 
+  
+}
+
+.header-logo {
+  height: 10em;
+  
+  @include side-width;
+
+}
+
+.pointer {
+    cursor:pointer;
+}
+
+.fixed-sidebar {
+  flex-grow: 1;
+  background-color: #1a1a1a;
+  //border: 8px solid green;
+  @include side-width();
+
+
+}
+
+.sidebar-text {
+  color: #a6a6a6;
+  font-weight: bold;
+
+}
+
+.setting-bar {
+  height: 2em;
+  margin: auto;
+  display: inline-block;
+  padding: 0.3em 2em;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+
+  margin: auto;
+
+}
+
+.setting-bar:hover {
+  background-color: #333333;
+  
+
+}
+
+.setting-bar:hover .dropdown-content {
+  display: block;
+  
+
+
+}
+
+.sidebar-setting-box {
+  height: 2em;
+  margin: auto;
+  padding: 0.3em 2em;
+  display: none;
+
+}
+
+
+.sidebar-text:hover {
+  color: #a6a6a6;
+  text-decoration: none;
+
+}
+
+
+.sidebar-text-box {
+  height: 2em;
+  margin: auto;
+  padding: 0.3em 2em;
+  cursor: pointer;
+  
+
+}
+.sidebar-text-box:hover  {
+  background-color: #333333;
+  text-decoration: none;
+  
+}
+
+.sidebar-text-box-dd {
+  height: 2em;
+  width: 15em;
+  cursor: pointer;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+.sticky {
+  position: fixed;
+}
+
+.border {
+  @include border;
+}
+
+.none {
+  display: none;
+}
+
+
+.line-menu {
+    position: sticky;
+    //border: 8px solid blue;
+    flex-grow: 5;
+    @include line-menu-width();
+    
+  }
+  
+  .menu-box {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    min-height: 15em;
+    min-width: 22em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    margin-top: 0.2em;
+  }
+
+  .post-box {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    min-height: 7em;
+    min-width: 22em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    margin-top: 0.2em;
+  }
+
+  .comment-box {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    min-height: 3em;
+    min-width: 22em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    margin-top: 0.2em;
+
+  }
+  
+  
+  .menu-box-input {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    min-height: 15em;
+    min-width: 22em;
+    //max-width: 58em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    margin-top: 0.2em;
+  
+  }
+  
+  .save-button {
+    margin-top: 0.25em;
+    margin-right: 0em;
+  }
+  
+  .delete-button {
+    height: 2.2em;
+  }
+  
+  .center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .menu-box:hover {
+    background-color: #f2f2f2;
+    text-decoration: none;
+  }
+  
+  .detail-menu {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0em 0.5em;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    min-width: 18em;
+  
+  }
+
+  .profileUsername {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0em 0.5em;
+    padding-left: 1.5em;
+    padding-top: 0em;
+    width: 44em;
+    min-height: 7em;
+
+  
+  }
+  
+  .img {
+    width: 14em;
+    height: 14em;
+    //background-image: url("../images/AyamTaliwang.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .post-img {
+    width: 6em;
+    height: 6em;
+    //background-image: url("../images/AyamTaliwang.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .comment-img {
+    width: 1.5em;
+    height: 1.5em;
+    //background-image: url("../images/AyamTaliwang.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 7em;
+
+  }
+  
+  .description {
+  
+    width: 20em;
+  }
+
+  .content-posting {
+      width: 45em;
+  }
+  
+  .dish-name {
+    margin-top: 3.5em;
+  
+    
+  }
+  
+  .price-qty {
+    display: flex;
+    margin-top: 6em;
+  
+  }
+
+  .content-date {
+    display: flex;
+    position: relative;
+    right: 0%;
+    margin-top: 6em;
+    
+  
+  }
+  
+  .price {
+    margin-left: 1em;
+    margin-top: 0.3em;
+  }
+
+  .prices {
+    margin-left: 0.5em;
+    margin-top: 0.2em;
+  }
+
+  .signout {
+    margin-left: 1.7em;
+    margin-top: 0.2em;
+  }
+
+  .comment-button {
+      margin-left: 52em;
+      position: absolute;
+  }
+  
+  .qty-box {
+    margin-left: 5em;
+  }
+  
+  
+  .sidebar-right {
+    @include order-width();
+    flex-grow: 3;
+    //border: 2px solid #cccccc;
+    min-height: 100em;
+    
+  
+  }
+  
+  .list-order {
+    @include order-width();
+    min-height: 10em;
+    //border-left: 1px solid #cccccc;
+    bottom: 0px;
+    padding: 1em;
+    
+  }
+  
+  .total-order {
+    //@include border();
+    top: 100px;
+    margin-top: 4em;
+  }
+  
+  .price-qty-display {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+  
+  }
+  
+  .cashier-line {
+    @include border();
+    @include line-menu-width();
+    padding-left: 1em;
+  
+  }
+  
+  .manage-account {
+    min-width: 40em;
+    padding: 9em 7em;
+  }
+  
+  .login-page {
+    //background-color: blue;
+    position: static;
+    height: max-content;
+    //width: fit-content;
+  }
+  
+  
+  .login-box {
+    
+    height: 12em;
+    width: 32em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: sticky;
+    border: 2px solid black;
+  }
+  
+  .login-title-area {
+    margin: 1em;
+    width: 30em;
+    height: 3em;
+    padding: 1em;
+  }
+  
+  .login-user-pass-area {
+    display: flex;
+    
+    margin: 1em;
+    width: 30em;
+    height: 5.5em;
+    padding: 1em;
+  }
+  
+  .login-button {
+    height: 2em;
+    bottom: 0%;
+    position: relative;
+  }
+  
+  .margin-top {
+    margin-top: 1.7em;
+  }
+  
+  
+  // Modal for condirm
+  
+  .modals {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25em;
+    height: 15em;
+    background: #a6a6a6;
+  
+  }
+  
+  .button-modal {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+  
+  } 
+  
+  .modal-statement {
+    background-color: #f2f2f2;
+    height: 11em;
+    width: 24em;
+    position: relative;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-text {
+    //width: fit-content;
+    max-width: 18em;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  } 
