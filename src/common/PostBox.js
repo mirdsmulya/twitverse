@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import CommentSection from '../common/CommentSection';
 
 
-const PostBox = ({post, userData, editButton, deleteButton, commentsSection}) => {
+const PostBox = ({post, userData, editButton, deleteButton}) => {
     let commentNumbers = post.comments.length
     debugger;
 
@@ -25,7 +25,7 @@ const PostBox = ({post, userData, editButton, deleteButton, commentsSection}) =>
             <div className="content-date ">
                 
                 <div className="" > 
-                    <Link to="/"> Comments ({commentNumbers}) </Link> 
+                    <div> Comments ({commentNumbers}) </div> 
                     <div> {post.date} </div>
                     <button onClick={deleteButton} name={userData.username} id={post.id}>x</button>
                     <button onClick={editButton} name={userData.username} id={post.id}>Edit</button>
