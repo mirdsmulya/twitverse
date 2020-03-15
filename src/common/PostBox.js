@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { userInfo } from 'os';
+import CommentSection from '../common/CommentSection';
 
-const PostBox = ({post, userData, editButton, deleteButton}) => {
+
+const PostBox = ({post, userData, editButton, deleteButton, commentsSection}) => {
     let commentNumbers = post.comments.length
     debugger;
 
     return(
         
-           
-        
+        <div>
         <div className="post-box ">
             <div className="">
                 <img className="post-img" src={userData.profilePicture} alt={userData.name}></img>
@@ -33,9 +33,22 @@ const PostBox = ({post, userData, editButton, deleteButton}) => {
                 
             </div>
 
-
-        </div>
         
+        </div>
+        <div className="comment-box">
+        <div>
+            <img className="comment-img border" />
+            </div>
+            <input className="prices"/>
+            <div className="comment-button">
+            <button>Post</button>
+
+            </div>
+        </div>
+        {post.comments.map( comment => 
+            <CommentSection comment={comment} key={comment.id} /> 
+        )}
+        </div>   
         
     );
 
