@@ -33,7 +33,8 @@ export default {
       {test: /\.jsx?$/,loader: 'babel-loader',exclude: /node_modules/},
       {test: /(\.css)$/, loader: "style-loader!css-loader"},
       {test: /\.(jpg|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,loader: 'url-loader?limit=100000'},
-      {test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader']}
+      {test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader']},
+      { test: /\.json$/, loader: 'json-loader' }
 
 
     ]
