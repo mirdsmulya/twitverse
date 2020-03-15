@@ -1,15 +1,46 @@
 import DataApi from '../api/dataApi';
 import *  as types from './actionTypes';
+import { userInfo } from 'os';
 
 
 export function loadDataSuccess(datas) {
     return {type: types.LOAD_DATA_SUCCESS, datas};
 }
 
+export function addPostSuccess(data) {
+    return {type: types.ADD_POST_SUCCESS, data};
+}
+
+export function deletePostSuccess(datas) {
+    return {type: types.DELETE_POST_SUCCESS, datas};
+}
+
 export function loadData() {
     return function(dispatch) {
         return DataApi.getAllData().then( datas => {
             dispatch(loadDataSuccess(datas));
+        }).catch( error => {
+            throw(error);
+        });
+    };
+}
+
+export function addPost(postValue, id) {
+    debugger;
+    return function(dispatch) {
+        return DataApi.addPost(postValue, id).then( data => {
+            dispatch(addPostSuccess(data));
+        }).catch( error => {
+            throw(error);
+        });
+    };
+}
+
+export function deletePost(username, postId) {
+    debugger;
+    return function(dispatch) {
+        return DataApi.deletePost(username, postId).then( datas => {
+            dispatch(deletePostSuccess(datas));
         }).catch( error => {
             throw(error);
         });
