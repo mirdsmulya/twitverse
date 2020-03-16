@@ -15,6 +15,12 @@ export default function dataReducer(state = initialState.datas, action) {
               ];
         case types.DELETE_POST_SUCCESS:
             return action.datas;
+
+        case types.ADD_COMMENT_SUCCESS:
+            return [
+                Object.assign({}, action.data),
+                ...state.filter(data => data.username !== action.data.username)
+            ]
         default:
             return state;
     }

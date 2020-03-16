@@ -1,6 +1,5 @@
 import DataApi from '../api/dataApi';
 import *  as types from './actionTypes';
-import { userInfo } from 'os';
 
 
 export function loadDataSuccess(datas) {
@@ -15,6 +14,10 @@ export function deletePostSuccess(datas) {
     return {type: types.DELETE_POST_SUCCESS, datas};
 }
 
+export function postCommentSuccess(data) {
+    return {type: types.ADD_COMMENT_SUCCESS, data}
+}
+
 export function loadData() {
     return function(dispatch) {
         return DataApi.getAllData().then( datas => {
@@ -24,7 +27,6 @@ export function loadData() {
         });
     };
 }
-
 export function addPost(postValue, id) {
     debugger;
     return function(dispatch) {
@@ -45,4 +47,16 @@ export function deletePost(username, postId) {
             throw(error);
         });
     };
+}
+
+export function postComment(value, username, postId) {
+    debugger;
+    return function(dispatch) {
+        return DataApi.postComment(value, username, postId).then( data => {
+            dispatch(postCommentSuccess(data));
+        }).catch( error => {
+            throw(error);
+        });
+    };
+
 }

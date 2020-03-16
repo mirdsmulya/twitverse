@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import CommentSection from '../common/CommentSection';
 
 
-const PostBox = ({post, userData, editButton, deleteButton}) => {
+const PostBox = ({post, userData, editButton, postComment, deleteButton, commentValue, commentChange}) => {
     let commentNumbers = post.comments.length
     debugger;
 
@@ -39,9 +39,9 @@ const PostBox = ({post, userData, editButton, deleteButton}) => {
         <div>
             <img className="comment-img border" />
             </div>
-            <input className="prices"/>
+            <input className="prices" onChange={commentChange} value={commentValue} />
             <div className="comment-button">
-            <button>Post</button>
+            <button onClick={postComment} name={userData.username} id={post.id}>Post</button>
 
             </div>
         </div>

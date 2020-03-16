@@ -15,11 +15,15 @@ class ProfilePage extends React.Component {
         this.state = {
             posts: [],
             postBox: "hide",
-            postValue: ""
+            postValue: "",
+            commentValue: ""
         };
     this.postTwit = this.postTwit.bind(this);
     this.onType = this.onType.bind(this);
     this.deletePost = this.deletePost.bind(this);
+    this.albumClick = this.albumClick.bind(this);
+    this.postComment = this.postComment.bind(this);
+    this.commentChange = this.commentChange.bind(this);
 
     }
 
@@ -48,13 +52,36 @@ class ProfilePage extends React.Component {
 
     onType(event) {
         let postValue = event.target.value;
-
-        debugger;
         this.setState({postValue: postValue});
         debugger;
 
 
     }
+
+    commentChange(event) {
+        let commentValue =event.target.value;
+        this.setState({commentValue: commentValue});
+    }
+
+    albumClick(event) {
+        let username = event.target.name;
+        this.props.history.push("/album/"+username );
+        debugger;
+    }
+
+    postComment(event) {
+        let username = event.target.name;
+        let commentValue = this.state.commentValue;
+        let postId = event.target.id;
+        debugger;
+        this.props.action.postComment(commentValue, username, postId);
+        this.setState({commentValue: ""});
+        debugger;
+
+
+    }
+
+
 
     userCheck() {
         debugger
@@ -72,12 +99,14 @@ class ProfilePage extends React.Component {
         debugger;
         return(
             <div className="line-menu">
-                <UserBox userData={profileData} />
+                <UserBox userData={profileData}  />
+                <button className="btn album-button" onClick={this.albumClick} name={profileData.username}>Album</button>
+
                 <div></div>
                 <AddPostBox userData={profileData} onChange={this.onType} value={this.state.postValue} display={this.state.postBox} saveButton={this.postTwit}/>
                 
                 {posts.map(post => 
-                    <PostBox  key={post.id} post={post} userData={profileData} deleteButton={this.deletePost}/> 
+                    <PostBox commentChange={this.state.commentValue} key={post.id} post={post} userData={profileData} deleteButton={this.deletePost} postComment={this.postComment} commentChange={this.commentChange} commentValue={this.state.commentValue}/> 
                 )}
 
             </div>
