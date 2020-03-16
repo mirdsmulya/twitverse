@@ -7,7 +7,9 @@ class DataApi {
     static getAllData() {
         return new Promise((resolve, rejects) => {
             setTimeout( () => {
-                resolve(Object.assign([], datas));
+                fetch('https://my-json-server.typicode.com/mirdsmulya/fake-json-db/data/')
+                        .then(response => response.json())
+                        .then(json =>  {resolve(json); } );
             },0);
         });
     }
@@ -77,6 +79,36 @@ class DataApi {
 
     
     }
+    static postComment(postValue, username, postId ) {
+        return new Promise((resolve, rejects) => {
+            setTimeout( () => {
+                const newDate = new Date();
+                const dateString = newDate.getDate() + "/" + (newDate.getMonth()+1)  + "/" + newDate.getFullYear();
+                let userData = datas.find( data => data.username == username);
+                let dataIndex = datas.findIndex( data => data.username == username);
+                let postData = userData.post.find( post => post.id == postId)
+                let postIndex = userData.post.findIndex( data=> data.id == postId);
+                let currentAccount = sessionStorage.getItem('currentUserLogin')
+                const newComment = {
+                    time: dateString,
+                    id: newDate,
+                    text: postValue,
+                    name: currentAccount
+                };
+                
+                let commentList = [ ...postData.comments, newComment];
+                let newestPost = Object.assign({}, postData, {comments: commentList});
+                let newPostList = [...userData.post.slice(0,postIndex), newestPost, ...userData.post.slice(postIndex + 1, userData.post.length)]
+                let findalData = Object.assign({}, userData, {post: newPostList});
+                datas.splice(dataIndex, 1, findalData)
+                debugger;
+                resolve(Object.assign([], findalData));
+            },0);
+        });
+    }
+
+
+
 }
 
 export default DataApi;
