@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-const UserBox = ({userData, deleteButton}) => {
+const UserBox = ({userData, albumButton}) => {
     let linkProfile = "/profile/"+ userData.username;
     return(
-        <Link to={linkProfile} activeClassName="active" className="pointer" >
+        <Link to={linkProfile} activeClassName="active" className="" >
         <div className="menu-box"> 
             <div className="border">
             <img className="img" src={userData.profilePicture} alt={userData.name}></img>
@@ -23,7 +23,6 @@ const UserBox = ({userData, deleteButton}) => {
                                             
                 </div>
             </div>
-            <button className="none" onClick={deleteButton} name={userData.name}>Delete</button>
 
         </div>
         </Link>
