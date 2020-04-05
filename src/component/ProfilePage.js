@@ -24,6 +24,8 @@ class ProfilePage extends React.Component {
     this.albumClick = this.albumClick.bind(this);
     this.postComment = this.postComment.bind(this);
     this.commentChange = this.commentChange.bind(this);
+    this.deleteComment = this.deleteComment.bind(this);
+    this.editComment = this.editComment.bind(this);
 
     }
 
@@ -81,6 +83,17 @@ class ProfilePage extends React.Component {
 
     }
 
+    deleteComment(event) {
+        let eventInfo = JSON.parse(event.target.value)  ;
+        this.props.action.deleteComment(eventInfo);
+        debugger;
+
+    }
+
+    editComment(event) {
+        let b;
+    }
+
 
 
     userCheck() {
@@ -106,7 +119,17 @@ class ProfilePage extends React.Component {
                 <AddPostBox userData={profileData} onChange={this.onType} value={this.state.postValue} display={this.state.postBox} saveButton={this.postTwit}/>
                 
                 {posts.map(post => 
-                    <PostBox commentChange={this.state.commentValue} key={post.id} post={post} userData={profileData} deleteButton={this.deletePost} postComment={this.postComment} commentChange={this.commentChange} commentValue={this.state.commentValue}/> 
+                    <PostBox commentChange={this.state.commentValue} 
+                            key={post.id} post={post} 
+                            userData={profileData} 
+                            deleteButton={this.deletePost} 
+                            postComment={this.postComment} 
+                            commentChange={this.commentChange} 
+                            commentValue={this.state.commentValue}
+                            editComment={this.editComment}
+                            delComment={this.deleteComment}
+                            
+                            /> 
                 )}
 
             </div>
