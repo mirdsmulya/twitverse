@@ -20,7 +20,10 @@ export default function dataReducer(state = initialState.datas, action) {
             return [
                 Object.assign({}, action.data),
                 ...state.filter(data => data.username !== action.data.username)
-            ]
+            ];
+
+        case types.DELETE_COMMENT_SUCCESS:
+            return action.datas;
         default:
             return state;
     }

@@ -1,5 +1,5 @@
 
-import Data from '../../dataUser';
+import Data from '../../dataUser2';
 
 let datas = Object.assign([], Data.data);
 
@@ -83,15 +83,16 @@ class DataApi {
         return new Promise((resolve, rejects) => {
             setTimeout( () => {
                 const newDate = new Date();
+                const id = newDate.toString();
                 const dateString = newDate.getDate() + "/" + (newDate.getMonth()+1)  + "/" + newDate.getFullYear();
                 let userData = datas.find( data => data.username == username);
                 let dataIndex = datas.findIndex( data => data.username == username);
-                let postData = userData.post.find( post => post.id == postId)
+                let postData = userData.post.find( post => post.id == postId);
                 let postIndex = userData.post.findIndex( data=> data.id == postId);
-                let currentAccount = sessionStorage.getItem('currentUserLogin')
+                let currentAccount = sessionStorage.getItem('currentUserLogin');
                 const newComment = {
                     time: dateString,
-                    id: newDate,
+                    id: id,
                     text: postValue,
                     name: currentAccount
                 };
@@ -103,6 +104,37 @@ class DataApi {
                 datas.splice(dataIndex, 1, findalData)
                 debugger;
                 resolve(Object.assign([], findalData));
+            },0);
+        });
+    }
+
+    static deleteComment(eventValue) {
+        return new Promise((resolve, rejects) => {
+            setTimeout( () => {
+                let userData = datas.find( data=> data.username == eventValue.username);
+                let dataIndex = datas.findIndex( data=> data.username == eventValue.username);
+                debugger;
+                let userDataPost = userData.post;
+
+                let postData = userDataPost.find( data => data.id == eventValue.postId);
+                let postIndex = userDataPost.findIndex( data => data.id == eventValue.postId);
+
+                let commentData = [ ...postData.comments.filter(comments => comments.id != eventValue.commentId)];
+                let finalPostData = Object.assign({}, postData, {comments: commentData}) ;
+
+                //let postData = [...postData.filter( data => data.id != eventValue.postId)];
+                //userDataPost.splice(postIndex, 1, finalPostData);
+                let newPostList = [...userDataPost.slice(0,postIndex), finalPostData, ...userDataPost.slice(postIndex + 1, userData.post.length)]
+
+                
+                debugger;
+                //userDataPost = [...userDataPost.filter( post => post.id != evenpostId)];
+                let findalData = Object.assign({}, userData, {post: newPostList});
+                datas.splice(dataIndex,1, findalData);
+
+                debugger;
+
+                resolve(Object.assign([], datas));
             },0);
         });
     }

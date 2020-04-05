@@ -18,6 +18,10 @@ export function postCommentSuccess(data) {
     return {type: types.ADD_COMMENT_SUCCESS, data}
 }
 
+export function deleteCommentSuccess(datas) {
+    return {type: types.DELETE_COMMENT_SUCCESS, datas}
+}
+
 export function loadData() {
     return function(dispatch) {
         return DataApi.getAllData().then( datas => {
@@ -59,4 +63,15 @@ export function postComment(value, username, postId) {
         });
     };
 
+}
+
+export function deleteComment(eventValue) {
+    debugger;
+    return function(dispatch) {
+        return DataApi.deleteComment(eventValue).then( datas => {
+            dispatch(deleteCommentSuccess(datas));
+        }).catch( error => {
+            throw(error);
+        });
+    };
 }
