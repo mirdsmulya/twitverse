@@ -16,7 +16,8 @@ class ProfilePage extends React.Component {
             posts: [],
             postBox: "hide",
             postValue: "",
-            commentValue: ""
+            commentValue: "",
+            postIdValue: ""
         };
     this.postTwit = this.postTwit.bind(this);
     this.onType = this.onType.bind(this);
@@ -26,6 +27,7 @@ class ProfilePage extends React.Component {
     this.commentChange = this.commentChange.bind(this);
     this.deleteComment = this.deleteComment.bind(this);
     this.editComment = this.editComment.bind(this);
+    this.showComment = this.showComment.bind(this);
 
     }
 
@@ -83,6 +85,18 @@ class ProfilePage extends React.Component {
 
     }
 
+    showComment(event) {
+        let postId = event.target.name;
+
+        if (postId != this.state.postIdValue) {
+            return this.setState({postIdValue: postId});
+        }
+        
+        this.setState({postIdValue: 'hide'});
+        debugger;
+
+    }
+
     deleteComment(event) {
         let eventInfo = JSON.parse(event.target.value)  ;
         this.props.action.deleteComment(eventInfo);
@@ -128,6 +142,8 @@ class ProfilePage extends React.Component {
                             commentValue={this.state.commentValue}
                             editComment={this.editComment}
                             delComment={this.deleteComment}
+                            showComment={this.showComment}
+                            postIdValue={this.state.postIdValue}
                             
                             /> 
                 )}
