@@ -119,6 +119,7 @@ class ProfilePage extends React.Component {
     }
 
     render() {
+        if (this.props.datas.length == 0) {return(<div className="center"><LoopCircleLoading color="black" size="large"/></div>)}
         this.userCheck();
         let profileData = this.props.profileData;
         let posts = this.props.posts;

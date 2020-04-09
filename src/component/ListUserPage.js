@@ -6,6 +6,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as dataAction from '../actions/dataAction';
 import Toastr from 'toastr';
+import  LoopCircleLoading  from 'react-loading';
 
 class ListUserPage extends React.Component {
     constructor(props, context){
@@ -31,11 +32,13 @@ class ListUserPage extends React.Component {
 
     render() {
         this.userCheck();
+        if (this.props.datas.length == 0) {return(<div className="center"><LoopCircleLoading color="black" size="large"/></div>)}
         let users = this.props.datas;
         debugger;
         return(
             <div className="line-menu">
                 Hellow World!
+                
                 {users.map(user => 
                     <UserBox userData={user} key={user.id}/>
                     )}

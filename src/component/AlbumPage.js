@@ -31,6 +31,7 @@ class AlbumPage extends React.Component {
     }
 
     render() {
+        if (this.props.datas.length == 0) {return(<div className="center"><LoopCircleLoading color="black" size="large"/></div>)}
         let profileData = this.props.profileData;
         this.userCheck();
         let users = this.props

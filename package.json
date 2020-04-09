@@ -24,6 +24,7 @@
     "react": "15.0.2",
     "react-dom": "15.0.2",
     "react-images-upload": "^1.2.7",
+    "react-loading": "^2.0.3",
     "react-redux": "^5.0.0",
     "react-router": "2.4.0",
     "react-router-dom": "^5.1.2",
